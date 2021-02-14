@@ -10,7 +10,10 @@ export const CreateTodo = () => {
 
   const onInputChange = (e) => setTodo(e.target.value)
 
-  const onInputSubmit = () => dispatch(addTodo(todo))
+  const onInputSubmit = () => {
+    dispatch(addTodo(todo))
+    setTodo("")
+  }
 
   return (
     <div>

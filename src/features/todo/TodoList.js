@@ -1,5 +1,20 @@
 import React from "react"
 
+import { useSelector, useDispatch } from "react-redux"
+
+import { deleteTodo } from "./todoSlice"
+
 export const TodoList = () => {
-  return <p>hi</p>
+  const todos = useSelector((state) => state.todo)
+
+  const dispatch = useDispatch()
+
+  const mapTodo = todos.map((todo, index) => (
+    <div>
+      <span>{todo}</span>
+      <button onClick={() => dispatch(deleteTodo(index))}>Delete</button>
+    </div>
+  ))
+
+  return <p>{mapTodo}</p>
 }
