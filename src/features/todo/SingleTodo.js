@@ -13,7 +13,7 @@ export const SingleTodo = ({ match }) => {
   return (
     <div>
       <h3>{foundTodo.todo}</h3>
-      <Link>Edit</Link>
+      <Link to={`/edit/${foundTodo.id}`}>Edit</Link>
     </div>
   )
 }
