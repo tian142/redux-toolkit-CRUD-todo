@@ -10,11 +10,11 @@ export const TodoList = () => {
   const dispatch = useDispatch()
 
   const mapTodo = todos.map((todo, index) => (
-    <div>
-      <span>{todo}</span>
+    <div key={todo.id}>
+      <span>{todo.todo}</span>
       <button onClick={() => dispatch(deleteTodo(index))}>Delete</button>
     </div>
   ))
 
-  return <p>{mapTodo}</p>
+  return <div>{mapTodo}</div>
 }
