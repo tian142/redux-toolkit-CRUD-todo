@@ -18,7 +18,6 @@ export const CreateTodo = () => {
   return (
     <div>
       <div>
-        <h1>Todo List</h1>
         <span>
           <input value={todo} onChange={onInputChange} />
         </span>
